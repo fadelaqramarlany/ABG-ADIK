@@ -14,12 +14,21 @@ export const useProducts = () => {
 
 export const ProductProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem('abg_products');
-    return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
+    try {
+      const saved = localStorage.getItem('abg_products');
+      return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
+    } catch (error) {
+      console.error('Error loading products from localStorage:', error);
+      return INITIAL_PRODUCTS;
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem('abg_products', JSON.stringify(products));
+    try {
+      localStorage.setItem('abg_products', JSON.stringify(products));
+    } catch (error) {
+      console.error('Error saving products to localStorage:', error);
+    }
   }, [products]);
 
   const addProduct = (newProduct: Omit<Product, 'id'>) => {
