@@ -2,11 +2,11 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# ABG@ADIK Batik Store
 
-This contains everything you need to run your app locally.
+A modern, youth-focused online Batik clothing store.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1wtUy1PzClh1bXcnJNalwKSbQnC0Vr1Bz
+**Live Demo:** [https://abg-adik-wf33.vercel.app/](https://abg-adik-wf33.vercel.app/)
 
 ## Run Locally
 
