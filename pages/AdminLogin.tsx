@@ -13,7 +13,7 @@ const AdminLogin: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (login(username, password)) {
-      navigate('/admin/dashboard');
+      navigate('/admin');
     } else {
       setError('Username atau password salah');
     }

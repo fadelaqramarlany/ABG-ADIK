@@ -46,9 +46,9 @@ const Navbar: React.FC = () => {
               {user?.isAuthenticated ? (
                 <>
                   <Link
-                    to="/admin/dashboard"
+                    to="/admin"
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/admin/dashboard')
+                      isActive('/admin')
                         ? 'bg-batik-secondary text-white'
                         : 'text-gray-300 hover:bg-indigo-800 hover:text-white'
                     }`}
@@ -65,9 +65,9 @@ const Navbar: React.FC = () => {
                 </>
               ) : (
                 <Link
-                  to="/admin/login"
+                  to="/login"
                   className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive('/admin/login')
+                    isActive('/login')
                       ? 'bg-indigo-800 text-white'
                       : 'text-gray-400 hover:text-white'
                   }`}
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
             {user?.isAuthenticated ? (
               <>
                 <Link
-                  to="/admin/dashboard"
+                  to="/admin"
                   onClick={() => setIsOpen(false)}
                   className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-800"
                 >
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
               </>
             ) : (
               <Link
-                to="/admin/login"
+                to="/login"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-indigo-800 hover:text-white"
               >
